@@ -1,11 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-xpoints = np.array([1, 8])
-ypoints = np.array([3, 10])
+x = np.array([1, 5, 8, 10,15])
+# y = np.array([3, 10, 12, 16, 20])
 
-plt.plot(xpoints, ypoints)
+plt.plot(x,'o')         # 如果不設定y質 會自動從 0 1 2 3依照順序排下去
 plt.show()
+
+# x = np.array([1, 8])
+# y = np.array([3, 10])
+#
+# plt.plot(x, y)
+# plt.show()
 
 # x = np.linspace(-1,5,30)    # -1~5 中間平均分配30個點
 # y1 = 2*x+1
