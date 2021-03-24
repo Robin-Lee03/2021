@@ -13,18 +13,3 @@ for result in second_high_student:
     print(result)
 
 
-
-# grades = sorted(grades,reverse=True)
-# print(grades)
-
-
-# def second_hight(grades):
-#     hightest = 0
-#     for grade in grades[0][1]:
-#         if grade > hightest:
-#             hightest = grade
-#     return  hightest
-#
-# result = second_hight(grades)
-# print(result)
-
