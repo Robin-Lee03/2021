@@ -28,7 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Stancode lecture/SC001_lecture10" />
   </component>
-  <component name="RunManager" selected="Python.matplotlib0408">
+  <component name="RunManager" selected="Python.Matplotlip0330">
     <configuration name="Matplotlib0329" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Matplotlib" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,9 +94,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Matplotlip0330" />
         <item itemvalue="Python.matplotlib0408" />
         <item itemvalue="Python.Matplotlib0329" />
-        <item itemvalue="Python.Matplotlip0330" />
       </list>
     </recent_temporary>
   </component>
