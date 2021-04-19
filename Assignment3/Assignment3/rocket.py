@@ -1,6 +1,6 @@
 """
 File: rocket.py
-Name:
+Name:Robin Lee
 -----------------------
 This program should implement a console program
 that draws ASCII art - a rocket.
@@ -17,26 +17,76 @@ SIZE = 3
 
 def main():
 
-	for i in range(1):
-		head()
-		belt()
-	# upper()
-	# lower()
-	# belt()
-	# head()
+	head()
+	belt()
+	upper()
+	lower()
+	belt()
+	head()
+
+
+def lower():
+	lower_img = ''
+	for i in range(1,SIZE+1):            # because the later one(y) in range(x,y) exclude Maximun
+		for j in range(1):
+			lower_img += '|'
+		for j in range(i-1):
+			lower_img += '.'
+		for j in range(i,SIZE+1):
+			lower_img += '\\/'
+		for j in range(i-1):
+			lower_img += '.'
+		for j in range(1):
+			lower_img += '|'
+		if i != SIZE:
+			lower_img += '\n'
+
+	print(lower_img)
+
+
+def upper():
+	upper_img = ''
+	for i in range(1,SIZE + 1):
+		for j in range(1):
+			upper_img += '|'
+		for j in range(SIZE - i):
+			upper_img += '.'
+		for j in range(i):
+			upper_img += '/\\'
+		for j in range(SIZE - i):
+			upper_img += '.'
+		for j in range(1):
+			upper_img += '|'
+		if i != SIZE:
+			upper_img += '\n'
+		else:
+			break
+
+	print(upper_img)
 
 
 def head():
-	for i in range(3):
-		print('/\\  ')
+	head_img = ''
+	for i in range(1, SIZE + 1):
+		for j in range(i,SIZE+1):
+			head_img += ' '
+		for j in range(i):
+			head_img += '/'
+		for j in range(i):
+			head_img += '\\'
+		if i != SIZE:
+			head_img += '\n'
+
+	print(head_img)
 
 
 def belt():
-	print('+',end='')
-	for i in range(6):
-		print('=',end='')
-	print('+')
-
+	belt_img = ''
+	belt_img += '+'
+	for i in range(SIZE+SIZE):
+		belt_img += '='
+	belt_img += '+'
+	print(belt_img)
 
 
 
