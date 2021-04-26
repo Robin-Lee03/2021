@@ -23,7 +23,54 @@ def main():
     """
     TODO:
     """
-    pass
+    my_random_word = random_word()
+    dash_img = dash(my_random_word)
+    chance = N_TURNS
+
+    while chance > 0:
+        print("You have ", chance, " guesses left.")
+        print('The word looks like: ', dash_img)
+        guess = input("Your guess: ").upper()
+        if not guess.isalpha() or len(guess) > 1:
+            print('illegal format')
+
+        elif guess in my_random_word:
+
+            new_str = ''
+            for i in range(len(my_random_word)):
+                if guess == my_random_word[i]:
+                    new_str += guess
+
+                else:
+                    if dash_img[i].isalpha():  # if last round user guess right alphabet,
+                        new_str += dash_img[i]  # the '-' in dash_img will become truly alphabet
+                    else:
+                        new_str += '-'
+
+            dash_img = new_str  # ensure every round the correct guess will be remain
+            print('you are correct!')
+
+        else:  # if user's guess not in the random_word the chance will -1
+            chance -= 1
+            print('There is no', guess, '\'s in the word')
+
+        if dash_img == my_random_word:
+            break
+
+    if chance == 0:
+        print("You are completely hung : (")
+    else:
+        print('You win ')
+
+    print("The word was: ", my_random_word)
+
+
+def dash(my_random_word):
+    dash = ''
+    for i in range(len(my_random_word)):
+        dash += '-'
+
+    return dash
 
 
 def random_word():

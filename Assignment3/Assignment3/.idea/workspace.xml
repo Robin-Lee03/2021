@@ -27,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../daily pratice(Python)" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -39,7 +39,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.rocket">
+  <component name="RunManager" selected="Python tests.Doctest build_complement">
     <configuration name="caesar" type="PythonConfigurationType" factoryName="Python">
       <module name="Assignment3" />
       <option name="INTERPRETER_OPTIONS" value="" />
