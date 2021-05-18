@@ -20,7 +20,7 @@ def main():
     new_one = build_complement(dna)
     print(new_one)
 
-def build_complement():
+def build_complement(dna):
     ans = ''
     for x in dna:
         if x == 'A':
