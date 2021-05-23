@@ -6,3 +6,13 @@ user = zip(name,data,height)
 for i in user:
     print(i)
 print(user)
+
+
+
+def divided(a,b):
+    try:
+        return a/b
+    except:
+        return "Zero division is meaningless"
+
+print(divided(1,0))
