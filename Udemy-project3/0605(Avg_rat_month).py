@@ -84,16 +84,3 @@ def app():
 jp.justpy(app)
 
 
-# def app():
-#     wp = jp.QuasarPage()
-#     h1 = jp.QDiv(a=wp, text="Analysis of Course Reviews", classes="text-h3 text-center q-pa-md")
-#     p1 = jp.QDiv(a=wp, text="These graphs represent course review analysis")
-#
-#     hc = jp.HighCharts(a=wp, options=chart_def)
-#     hc.options.xAxis.categories = list(month_average.index)
-#     hc.options.series[0].data = list(month_average['Rating'])
-#
-#     return wp
-#
-#
-# jp.justpy(app)
