@@ -4,14 +4,9 @@ from datetime import datetime
 from pytz import utc
 import matplotlib.pyplot as plt
 
-'''
-    HighCharts is a website which is JavaScript library
-'''
-
-
-data = pandas.read_csv('reviews.csv',parse_dates = ['Timestamp'])
-data['Day'] = data['Timestamp'].dt.date
-day_average = data.groupby(['Day']).mean()
+data = pandas.read_csv("reviews.csv", parse_dates=['Timestamp'])
+data['Week'] = data['Timestamp'].dt.strftime('%Y-%U')
+week_average = data.groupby(['Week']).mean()
 
 chart_def = """
 {
@@ -74,19 +69,18 @@ chart_def = """
 }
 """
 
+
 def app():
     wp = jp.QuasarPage()
     h1 = jp.QDiv(a=wp, text= 'Analysis of Course Review',
                  classes='text-h3 text-center q-pa-md')
     p1 = jp.QDiv(a=wp, text= 'These graphs represent course review analysis')
 
-    hc = jp.HighCharts(a=wp, options = chart_def)
-    hc.options.title.text = 'Average Rating by Day '
+    hc = jp.HighCharts(a=wp, options = chart_def)      # HighCharts is a website and we quote their chart
+    hc.options.xAxis.categories = list(week_average.index)
+    hc.options.series[0].data = list(week_average['Rating'])   # 用Rating 取代series list 裡面的值
 
 
-
-    hc.options.xAxis.categories = list(day_average.index)
-    hc.options.series[0].data = list(day_average['Rating'])
     return wp
 
 jp.justpy(app)
