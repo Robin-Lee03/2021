@@ -26,10 +26,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Udemy-project3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
-  <component name="RunManager" selected="Python.0522(zip funtion)">
+  <component name="RunManager" selected="Python.Population_Map 0522">
     <configuration name="0519" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="__MACOSX" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.0522(zip funtion)" />
         <item itemvalue="Python.Population_Map 0522" />
+        <item itemvalue="Python.0522(zip funtion)" />
         <item itemvalue="Python.Map(update)0521" />
         <item itemvalue="Python.Project-(US)Map" />
         <item itemvalue="Python.0519" />

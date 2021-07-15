@@ -13,12 +13,12 @@ cursor = con.cursor()
 
 def Translate(w):
     w = w.lower()
-    wc = w.capitalize()    # Q?
+    wc = w.capitalize()
     wu = w.upper()
 
 
     query = cursor.execute("SELECT Definition FROM Dictionary WHERE Expression = '%s' " % w)
-    results = cursor.fetchall()     # Q?
+    results = cursor.fetchall()
     if results:
         return results
 
@@ -35,8 +35,8 @@ def Translate(w):
 
     close_query = cursor.execute("SELECT Expression FROM Dictionary")   # 只取 Expression
     close_results = cursor.fetchall()
-    close_results = [r[0] for r in close_results]    # Q?
-    bestmatches = get_close_matches(w, close_results, n=5, cutoff=0.7)   # Q?
+    close_results = [r[0] for r in close_results]
+    bestmatches = get_close_matches(w, close_results, n=5, cutoff=0.7)
 
     if len(bestmatches) > 0:
         yn = input("Did you mean '%s' instead? Enter Y if yes, or N if no: " % bestmatches[0])
@@ -57,7 +57,7 @@ word = Translate(typein)
 # print(word)
 
 
-if type(word) == list:   # Q?
+if type(word) == list:
     for explanation in word:
         print(explanation[0])
 else:
